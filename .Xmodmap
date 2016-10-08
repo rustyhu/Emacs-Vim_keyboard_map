@@ -1,22 +1,24 @@
-!! Key Remap for both Vim and Emacs style under Linux
+!! Vim and Emacs style compatible key mapping under Linux
 !! Copy this script to HOME dir, and use xmodmap:
 !!		xmodmap ~/.Xmodmap
 !! for test.
+!! Advise to add "xmodmap ~/.Xmodmap" to .profile, making
+!! this swap effective automatically after shell login.
 
-! Swap Caps_Lock and Esc
-clear Lock
+! Swap Caps_Lock with Esc
+remove Lock = Caps_Lock
 keycode   9 = Caps_Lock NoSymbol Caps_Lock
 keycode  66 = Escape NoSymbol Escape
 add Lock	= Caps_Lock
 
-! Swap Control_L and Alt_L and Super_L
-clear Control
-clear Mod1
-clear Mod4
+! Control_L, Super_L, Alt_L ---> Super_L, Alt_L, Control_L
+remove Control = Control_L
+remove Mod1    = Alt_L
+remove Mod4    = Super_L
 keycode  37 = Super_L NoSymbol Super_L
 keycode  64 = Control_L NoSymbol Control_L
 keycode 133 = Alt_L Meta_L Alt_L Meta_L
-add    Control = Control_L Control_R
-add    Mod1    = Alt_L Alt_R
-add    Mod4    = Super_L Super_R
+add    Control = Control_L
+add    Mod1    = Alt_L
+add    Mod4    = Super_L
 
