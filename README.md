@@ -18,8 +18,17 @@ When I started to learn and use Emacs and vim, I found the default keyboard map 
 
 ## Others
 This Windows version configuration is tested by myself in MS Windows7.
-And Linux version configuration is tested in Arch Linux with xfce4 DE.
+And Linux version configuration is tested in Arch Linux with Xfce4 DE.
 More tests are going to be done later.
+
+Added 2016-11-10:
+Linux version has tested several times under Debian with Xfce4. .Xmodmap was effective but these remapped keys happened to be lost after using for a random period. It seemed that system frequently reseted the complete keymap to default.
+According to some [info source]<https://wiki.archlinux.org/index.php/Xmodmap>:
+>Note: xmodmap settings are reset by setxkbmap, which not only alters the alphanumeric keys to the values given in the map, but also resets all other keys to the startup default.
+
+So using setxkbmap may be a better choice, and Debian has a specific configure file __/etc/default/keyboard__ which could customize the keymap of console and Xorg both, relying on xkb rules. But I have tested, caps-swap-escape succedd but l_ctrl-swap-l_win-swap-l_alt failed. Do not know the reason.
+
+Now I make configs in keyboard file and .Xmodmap meanwhile.
 
 ## Acknowledgement
 
