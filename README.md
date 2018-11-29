@@ -9,13 +9,13 @@ Simply, this keymap helps when you need to use left Ctrl and Esc very frequently
 
 ## Main Idea
 
-|Function Key|Binded to Key(names on keyboard)|
+|Command(Function of)|Binded to Key(physical)|
 |-----------|----------|
-|Esc        |Caps Lock |
-|Caps Lock	|Esc	   |
-|Ctrl_L		|Alt_L     |
-|Alt_L		|Win_L	   |
-|Win_L		|Ctrl_L	   |
+|Escape     |Caps Lock |
+|Caps Lock  |Esc       |
+|Left Ctrl  |Alt_L     |
+|Left Alt   |Win_L     |
+|Left Win   |Ctrl_L    |
 
 
 ## Others
